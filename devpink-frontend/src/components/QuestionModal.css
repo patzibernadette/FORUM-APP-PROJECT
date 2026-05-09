@@ -1,0 +1,130 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+}
+
+.modal-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--pink-100);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--neutral-800);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--neutral-600);
+  cursor: pointer;
+  padding: 0.3rem;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--pink-500);
+}
+
+.field-group select {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--neutral-800);
+  background: var(--neutral-50);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+  font-family: var(--font-body);
+}
+
+.field-group select:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 3px rgba(247, 45, 110, 0.1);
+  background: white;
+}
+
+.field-group textarea {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--neutral-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--neutral-800);
+  background: var(--neutral-50);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.field-group textarea:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 3px rgba(247, 45, 110, 0.1);
+  background: white;
+}
+
+.field-group textarea.input-error,
+.field-group select.input-error {
+  border-color: #f87171;
+}
+
+.field-error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.btn-cancel {
+  background: none;
+  border: 1.5px solid var(--neutral-200);
+  color: var(--neutral-600);
+  padding: 0.65rem 1.4rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  border-color: var(--neutral-300);
+  background: var(--neutral-50);
+}
+
+.modal-submit {
+  width: auto;
+  margin-top: 0;
+  padding: 0.65rem 1.8rem;
+  border-radius: 20px;
+}
